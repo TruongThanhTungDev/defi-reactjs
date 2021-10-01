@@ -20,14 +20,13 @@ import { App } from 'app';
 
 import { HelmetProvider } from 'react-helmet-async';
 
-import { configureAppStore } from 'store/configureStore';
-
 import reportWebVitals from 'reportWebVitals';
 
 // Initialize languages
 import './locales/i18n';
+import { store } from 'redux/store';
 
-const store = configureAppStore();
+// const store = configureAppStore()
 const MOUNT_NODE = document.getElementById('root') as HTMLElement;
 
 ReactDOM.render(
