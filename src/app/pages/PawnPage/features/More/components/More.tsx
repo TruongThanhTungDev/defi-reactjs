@@ -8,8 +8,8 @@ const MoreUI = () => {
       <BgImg>
         <H2>Become a Pawnshop</H2>
         <PL>
-          Open your own pawn shop and discover a new business opportunity with
-          an unmatched ROI. Be a part of the world's financial revolution{' '}
+          Open your own pawn shop and discover a new business opportunity with an unmatched ROI. Be
+          a part of the world's financial revolution
         </PL>
         <PS>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</PS>
         <Button>Learn more</Button>
