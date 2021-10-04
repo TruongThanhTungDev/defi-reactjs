@@ -8,43 +8,53 @@
 
 import * as React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Switch, Route, BrowserRouter, Redirect } from 'react-router-dom';
-
-import { GlobalStyle } from 'styles/global-styles';
-
-import { PawnPage } from './pages/PawnPage/Loadable';
-import { NotFoundPage } from './components/NotFoundPage/Loadable';
 import { useTranslation } from 'react-i18next';
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
+import { GlobalStyle } from 'styles/global-styles';
+import ColorProvider from 'themes/ColorContext';
+import CopyRight from './components/CopyRight';
+import Footer from './components/Footer';
+import Navigation from './components/Navigation';
+import { NotFoundPage } from './components/NotFoundPage/Loadable';
 import AuthPage from './pages/Auth';
+import { PawnPage } from './pages/PawnPage/Loadable';
 
 export function App() {
   const { i18n } = useTranslation();
   return (
-    <BrowserRouter>
-      <Helmet
-        titleTemplate="%s - React Boilerplate"
-        defaultTitle="React Boilerplate"
-        htmlAttributes={{ lang: i18n.language }}
-      >
-        <meta name="description" content="A React Boilerplate application" />
-      </Helmet>
+    <ColorProvider>
+      <BrowserRouter>
+        <Helmet
+          titleTemplate="%s - React Boilerplate"
+          defaultTitle="React Boilerplate"
+          htmlAttributes={{ lang: i18n.language }}
+        >
+          <meta name="description" content="A React Boilerplate application" />
+        </Helmet>
 
-      <Switch>
-        <Route exact path="/">
-          <Redirect to="/pawn" />
-        </Route>
+        <Navigation />
 
-        <Route exact path="/auth">
-          <AuthPage />
-        </Route>
+        <Switch>
+          <Route exact path="/">
+            <Redirect to="/pawn" />
+          </Route>
 
-        <Route path="/pawn">
-          <PawnPage />
-        </Route>
+          <Route exact path="/auth">
+            <AuthPage />
+          </Route>
 
-        <Route component={NotFoundPage} />
-      </Switch>
-      <GlobalStyle />
-    </BrowserRouter>
+          <Route path="/pawn">
+            <PawnPage />
+          </Route>
+
+          <Route component={NotFoundPage} />
+        </Switch>
+
+        <Footer />
+
+        <CopyRight />
+        <GlobalStyle />
+      </BrowserRouter>
+    </ColorProvider>
   );
 }
