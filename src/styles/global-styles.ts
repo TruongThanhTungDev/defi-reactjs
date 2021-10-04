@@ -6,6 +6,11 @@ export const GlobalStyle = createGlobalStyle`
     height: 100%;
     width: 100%;
   }
+  :root {
+    --primary-color: #ffffff;
+    --secondary-color: #DBA83D;
+    --primary-bg: #232732; 
+  }
 
   body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -26,4 +31,5 @@ export const GlobalStyle = createGlobalStyle`
     font-family: inherit;
     font-size: inherit;
   }
+
 `;
