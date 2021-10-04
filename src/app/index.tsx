@@ -15,6 +15,7 @@ import { GlobalStyle } from 'styles/global-styles';
 import { PawnPage } from './pages/PawnPage/Loadable';
 import { NotFoundPage } from './components/NotFoundPage/Loadable';
 import { useTranslation } from 'react-i18next';
+import AuthPage from './pages/Auth';
 
 export function App() {
   const { i18n } = useTranslation();
@@ -31,6 +32,10 @@ export function App() {
       <Switch>
         <Route exact path="/">
           <Redirect to="/pawn" />
+        </Route>
+
+        <Route exact path="/auth">
+          <AuthPage />
         </Route>
 
         <Route path="/pawn">
