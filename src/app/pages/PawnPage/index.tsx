@@ -1,11 +1,9 @@
+import { makeStyles } from '@mui/styles';
 import * as React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { useAppSelector } from '../../../redux/hooks';
-import { selectCount } from '../../../redux/slices/counterSlice';
 import Explore from './features/Explore';
 import More from './features/More';
 import Reason from './features/Resson';
-import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -16,9 +14,6 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export function PawnPage() {
-  const count = useAppSelector(selectCount);
-  console.log(count);
-
   const classes = useStyles();
   return (
     <>

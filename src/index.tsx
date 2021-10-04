@@ -24,7 +24,7 @@ import reportWebVitals from 'reportWebVitals';
 
 // Initialize languages
 import './locales/i18n';
-import { store } from 'redux/store';
+import { store } from './app/redux/store';
 
 // const store = configureAppStore()
 const MOUNT_NODE = document.getElementById('root') as HTMLElement;
