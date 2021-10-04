@@ -1,11 +1,14 @@
+import { Typography } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import * as React from 'react';
+import { useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { ColorContext } from 'themes/ColorContext';
 import { useAppSelector } from '../../../redux/hooks';
 import { selectCount } from '../../../redux/slices/counterSlice';
 import Explore from './features/Explore';
 import More from './features/More';
 import Reason from './features/Resson';
-import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -20,13 +23,16 @@ export function PawnPage() {
   console.log(count);
 
   const classes = useStyles();
+
+  // color context
+  const colorContext = useContext(ColorContext);
+
   return (
     <>
       <Helmet>
         <title>Home Page</title>
         <meta name="description" content="A Boilerplate application homepage" />
       </Helmet>
-      <span>Pawn page</span>
       <div className={classes.root}>
         <Reason />
         <Explore />
