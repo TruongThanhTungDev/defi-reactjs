@@ -8,11 +8,11 @@
 
 import * as React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Switch, Route, BrowserRouter } from 'react-router-dom';
+import { Switch, Route, BrowserRouter, Redirect } from 'react-router-dom';
 
 import { GlobalStyle } from 'styles/global-styles';
 
-import { HomePage } from './pages/HomePage/Loadable';
+import { PawnPage } from './pages/PawnPage/Loadable';
 import { NotFoundPage } from './components/NotFoundPage/Loadable';
 import { useTranslation } from 'react-i18next';
 
@@ -29,7 +29,14 @@ export function App() {
       </Helmet>
 
       <Switch>
-        <Route exact path="/" component={HomePage} />
+        <Route exact path="/">
+          <Redirect to="/pawn" />
+        </Route>
+
+        <Route path="/pawn">
+          <PawnPage />
+        </Route>
+
         <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />
