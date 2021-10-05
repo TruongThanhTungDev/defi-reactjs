@@ -1,6 +1,7 @@
 import { makeStyles } from '@mui/styles';
 import * as React from 'react';
 import { Helmet } from 'react-helmet-async';
+import BorrowLend from './features/BorrowLend';
 import Explore from './features/Explore';
 import More from './features/More';
 import Reason from './features/Resson';
@@ -21,8 +22,8 @@ export function PawnPage() {
         <title>Home Page</title>
         <meta name="description" content="A Boilerplate application homepage" />
       </Helmet>
-      <span>Pawn page</span>
       <div className={classes.root}>
+        <BorrowLend />
         <Reason />
         <Explore />
         <More />
