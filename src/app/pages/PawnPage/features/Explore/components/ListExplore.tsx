@@ -84,6 +84,10 @@ const Wrapper = styled.div`
   margin: auto;
   position: relative;
 
+  @media screen and (min-width: 374px) and (max-width: 600px) {
+    max-width: 1025px;
+  }
+
   .sliderPc {
     @media screen and (min-width: 374px) and (max-width: 600px) {
       display: none;
@@ -118,6 +122,10 @@ const Wrapper = styled.div`
       @media screen and (min-width: 374px) and (max-width: 600px) {
         font-size: 30px;
       }
+
+      @media screen and (min-width: 601px) and (max-width: 1025px) {
+        font-size: 25px;
+      }
     }
   }
 
@@ -128,6 +136,10 @@ const Wrapper = styled.div`
     @media screen and (min-width: 374px) and (max-width: 600px) {
       left: 10px;
     }
+
+    @media screen and (min-width: 601px) and (max-width: 1025px) {
+      left: 0;
+    }
   }
 
   .slick-next {
@@ -136,6 +148,10 @@ const Wrapper = styled.div`
 
     @media screen and (min-width: 374px) and (max-width: 600px) {
       right: 20px;
+    }
+
+    @media screen and (min-width: 601px) and (max-width: 1025px) {
+      right: 0;
     }
   }
 
