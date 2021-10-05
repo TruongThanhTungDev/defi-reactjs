@@ -39,7 +39,7 @@ const BgImg = styled.div`
   padding-top: 48px;
   padding-bottom: 56px;
 
-  @media only screen and (max-width: 375px) {
+  @media only screen and (min-width: 375px) and (max-width: 600px) {
     background-image: url(${bgimg375});
     background-size: 100%;
     background-repeat: no-repeat;
@@ -71,7 +71,7 @@ const Button = styled.button`
     #bd8727 101.47%
   );
 
-  @media only screen and (max-width: 375px) {
+  @media only screen and (min-width: 375px) and (max-width: 600px) {
     margin-top: 12px;
     width: 121px;
     height: 36px;
@@ -85,7 +85,7 @@ const H2 = styled.h2`
   font-weight: 600;
   font-size: 36px;
   margin: 0px;
-  @media only screen and (max-width: 375px) {
+  @media only screen and (min-width: 375px) and (max-width: 600px) {
     font-size: 16px;
   }
 `;
@@ -98,7 +98,7 @@ const PL = styled.p`
   font-weight: 500;
   margin: 0px;
 
-  @media only screen and (max-width: 375px) {
+  @media only screen and (min-width: 375px) and (max-width: 600px) {
     /* width: 50%;
     font-size: 12px; */
     display: none;
@@ -112,7 +112,7 @@ const PS = styled.p`
   font-weight: 500;
   font-size: 12px;
   margin: 0px;
-  @media only screen and (max-width: 375px) {
+  @media only screen and (min-width: 375px) and (max-width: 600px) {
     display: block;
   }
 `;
