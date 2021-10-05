@@ -57,6 +57,7 @@ export default RessonItem;
 
 const Wrapper = styled.div`
   p {
+    padding: 0 30px;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -72,7 +73,7 @@ const Wrapper = styled.div`
   }
   @media (min-width: 374px) and (max-width: 480px) {
     .titleMobile {
-      padding: 0 30px;
+      padding: 0 20px 0 30px;
     }
     h4 {
       font-style: normal;
@@ -82,6 +83,7 @@ const Wrapper = styled.div`
       margin-bottom: 8px;
     }
     p {
+      padding: 0;
       font-style: normal;
       font-weight: normal;
       font-size: 14px;
