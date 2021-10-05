@@ -33,6 +33,14 @@ const Wrapper = styled.div`
     padding-bottom: 30px;
   }
 
+  @media screen and (min-width: 601px) and (max-width: 1025px) {
+    width: 180px;
+  }
+
+  @media screen and (min-width: 601px) and (max-width: 1025px) {
+    width: 210px;
+  }
+
   img {
     border-radius: 20px;
     width: 100%;
@@ -40,6 +48,10 @@ const Wrapper = styled.div`
 
     @media screen and (min-width: 374px) and (max-width: 600px) {
       height: 177px;
+    }
+
+    @media screen and (min-width: 601px) and (max-width: 1025px) {
+      height: 180px;
     }
   }
 
