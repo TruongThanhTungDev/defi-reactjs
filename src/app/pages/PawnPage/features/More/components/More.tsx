@@ -29,7 +29,7 @@ const ContainerMore = styled.div`
 
 const BgImg = styled.div`
   background-image: url(${bgimg});
-  width: 80%;
+  width: 70%;
   border-radius: 20px;
   background-size: cover;
 
