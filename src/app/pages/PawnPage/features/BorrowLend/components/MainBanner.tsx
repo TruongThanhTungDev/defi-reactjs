@@ -18,7 +18,7 @@ const Wrapper = styled.div`
   display: flex;
   margin-top: 34px;
 
-  @media screen and (min-width: 374px) and (max-width: 600px) {
+  @media screen and (min-width: 320px) and (max-width: 600px) {
     width: 100%;
     display: block;
     margin-top: 27px;

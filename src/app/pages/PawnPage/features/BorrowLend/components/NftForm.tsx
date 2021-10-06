@@ -29,6 +29,11 @@ const Wrapper = styled.div`
     margin-top: 57px;
     margin-bottom: 42px;
 
+    @media screen and (min-width: 320px) and (max-width: 600px) {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
     img {
       width: 100%;
       height: 100%;
@@ -38,6 +43,16 @@ const Wrapper = styled.div`
   .btn {
     width: 186px;
     margin: auto;
+
+    @media screen and (min-width: 320px) and (max-width: 600px) {
+      width: 100%;
+      button {
+        line-height: 12px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22px;
+      }
+    }
   }
 
   p {
@@ -49,6 +64,13 @@ const Wrapper = styled.div`
     letter-spacing: 0em;
     margin-bottom: 80px;
     margin-top: 32px;
+
+    @media screen and (min-width: 320px) and (max-width: 600px) {
+      margin-bottom: 20px;
+      margin-top: 24px;
+      font-size: 14px;
+      line-height: 17px;
+    }
 
     span {
       color: var(--secondary-color);

@@ -49,6 +49,15 @@ export default function BorrowForm() {
               fontSize="16px"
             />
           </div>
+          <div className="leftBtnMobile" onClick={handleClick}>
+            <ButtonField
+              nameBtn="left"
+              sizeBtn="small"
+              content="Cryptocurrency"
+              style={statusActive === 'left' ? 'goldBtn' : ''}
+              fontSize="14px"
+            />
+          </div>
           <div className="rightBtn" onClick={handleClick}>
             <ButtonField
               nameBtn="right"
@@ -56,6 +65,15 @@ export default function BorrowForm() {
               content="NFT"
               style={statusActive === 'right' ? 'goldBtn' : ''}
               fontSize="16px"
+            />
+          </div>
+          <div className="rightBtnMobile" onClick={handleClick}>
+            <ButtonField
+              nameBtn="right"
+              sizeBtn="small"
+              content="NFT"
+              style={statusActive === 'right' ? 'goldBtn' : ''}
+              fontSize="14px"
             />
           </div>
         </div>
@@ -78,11 +96,40 @@ const Wrapper = styled.div`
     margin-top: 26px;
     border-radius: 30px;
     padding: 5px;
+
+    @media screen and (min-width: 320px) and (max-width: 600px) {
+      width: 227px;
+      margin-top: 16px;
+      padding: 4px;
+      margin-bottom: 32px;
+    }
   }
   .leftBtn {
     width: 174px;
+
+    @media screen and (min-width: 320px) and (max-width: 600px) {
+      display: none;
+    }
+  }
+  .leftBtnMobile {
+    display: none;
+
+    @media screen and (min-width: 320px) and (max-width: 600px) {
+      display: block;
+    }
   }
   .rightBtn {
     flex: 1;
+    @media screen and (min-width: 320px) and (max-width: 600px) {
+      display: none;
+    }
+  }
+  .rightBtnMobile {
+    display: none;
+    flex: 1;
+
+    @media screen and (min-width: 320px) and (max-width: 600px) {
+      display: block;
+    }
   }
 `;
