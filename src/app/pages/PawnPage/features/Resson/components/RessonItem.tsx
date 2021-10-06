@@ -72,9 +72,59 @@ const Wrapper = styled.div`
     margin-top: 34px;
   }
   @media (min-width: 1440) and (max-width: 1919) {
+    .titleMobile {
+      padding: 0 20px 0 30px;
+    }
+    h4 {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 8px;
+    }
+    p {
+      padding: 0;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+    }
+    .containerMobile {
+      display: flex;
+      flex-direction: row;
+      text-align: left;
+    }
+    .containerMobileR {
+      display: flex;
+      flex-direction: row-reverse;
+      text-align: right;
+    }
   }
 
-  @media (min-width: 374px) and (max-width: 480px) {
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .titleMobile {
+      padding: 0 20px 0 30px;
+    }
+    .container {
+      justify-content: center;
+    }
+    h4 {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 8px;
+    }
+    p {
+      padding: 0;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  @media (max-width: 600px) {
     .titleMobile {
       padding: 0 20px 0 30px;
     }

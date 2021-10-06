@@ -33,7 +33,7 @@ const Wrapper = styled.div`
     margin-bottom: 100px;
     margin-top: 0;
   }
-  @media (min-width: 374px) and (max-width: 480px) {
+  @media (max-width: 600px) {
     padding: 40px 16px 50px 16px;
     h3 {
       font-style: normal;
@@ -45,5 +45,18 @@ const Wrapper = styled.div`
   }
   @media (min-width: 1440px) and (max-width: 1919px) {
     padding: 40px 26px 50px 26px;
+  }
+  @media (max-width: 1440px) {
+    padding: 40px 26px 50px 26px;
+  }
+  @media (min-width: 601px) and (max-width: 1024px) {
+    padding: 35px 24px 50px 24px;
+    h3 {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 27px;
+      margin-bottom: 35px;
+    }
   }
 `;
