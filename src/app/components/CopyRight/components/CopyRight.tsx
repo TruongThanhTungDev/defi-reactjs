@@ -9,11 +9,11 @@ export default function CopyRightUI() {
   const matches = useMediaQuery(themes.breakpoints.down('md'));
   return (
     <Container>
-      <Grid container width={matches ? '90%' : '70%'}>
-        <Grid item xl={6} xs={12} textAlign={matches ? 'center' : 'left'}>
+      <Grid container width={matches ? '100%' : '70%'}>
+        <Grid item xl={6} xs={12} md={6} textAlign={matches ? 'center' : 'left'}>
           <Box component="span">© 2021 DeFi For You. All rights reserved.</Box>
         </Grid>
-        <Grid item xl={6} xs={12} textAlign={matches ? 'center' : 'right'}>
+        <Grid item xl={6} xs={12} md={6} textAlign={matches ? 'center' : 'right'}>
           <Box textAlign="right" component="span">
             <Box component="span">Terms of Service </Box>
             <Box component="span"> | </Box>
@@ -30,5 +30,7 @@ const Container = styled.div`
   color: #74767b;
   display: flex;
   justify-content: center;
-  padding: 16px;
+  padding-top: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 `;

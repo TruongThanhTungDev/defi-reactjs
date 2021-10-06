@@ -62,7 +62,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
 
-  @media only screen and (min-width: 375px) and (max-width: 600px) {
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
     background-size: 100%;
     background-position: 0px 30px;
     background-repeat: no-repeat;
