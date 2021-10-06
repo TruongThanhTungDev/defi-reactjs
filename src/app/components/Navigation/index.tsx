@@ -9,6 +9,7 @@ import DefiButton from './components/DefiButton';
 import barIcon from './assets/bar-icon.svg';
 import closeBar from './assets/close-bar.svg';
 import MenuBars from './components/MenuBars';
+import { Link } from 'react-router-dom';
 
 export default function Navigation() {
   const [openBars, setOpenBars] = useState(false);
@@ -40,7 +41,9 @@ export default function Navigation() {
         <DefiButton content="Connect" />
 
         <div className="dnone-sm">
-          <DefiButton content="Login" />
+          <Link to="/auth">
+            <DefiButton content="Login" />
+          </Link>
         </div>
 
         {/* icon, dialog bars */}

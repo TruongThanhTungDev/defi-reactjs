@@ -20,7 +20,14 @@ const Contact = () => {
         <Box>
           <img src={Logo} alt="this is logoF" />
         </Box>
-        <Box color="#ffffff" paddingLeft="11px" position="relative">
+        <Box
+          color="#ffffff"
+          paddingLeft="11px"
+          position="relative"
+          sx={{
+            fontFamily: `'Oswald', sans-serif`,
+          }}
+        >
           <Box fontWeight="bold" fontSize="1.8em">
             DeFi For You
             <Box component="span" color="#ffbf00">

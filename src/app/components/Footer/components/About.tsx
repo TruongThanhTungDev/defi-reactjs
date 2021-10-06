@@ -31,18 +31,18 @@ const Title = styled.p`
 `;
 
 const TextContentYellow = styled.span`
-  font-family: Montserrat;
   color: #dba83d;
   margin: 0px;
   font-weight: 500;
   margin-bottom: 4px;
   margin-top: 4px;
+  font-family: Inter;
 `;
 
 const TextContent = styled.span`
-  font-family: Montserrat;
   font-weight: 500;
   font-size: 14px;
   margin: 0px;
   color: #9fa6b2;
+  font-family: Inter;
 `;
