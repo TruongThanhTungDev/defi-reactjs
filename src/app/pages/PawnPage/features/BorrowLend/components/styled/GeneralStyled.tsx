@@ -7,7 +7,8 @@ export const GeneralForm = styled.div`
   border-radius: 30px;
   padding: 0 30px;
 
-  @media screen and (min-width: 374px) and (max-width: 600px) {
+  @media screen and (min-width: 320px) and (max-width: 600px) {
     width: 100%;
+    padding: 0 12px;
   }
 `;

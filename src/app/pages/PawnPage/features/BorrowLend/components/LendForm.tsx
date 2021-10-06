@@ -9,6 +9,7 @@ import ButtonField from 'app/components/FormControl/ButtonField';
 import SelectField from 'app/components/FormControl/SelectField';
 import { Radio } from '@mui/material';
 import { orange } from '@mui/material/colors';
+import MultipleSelect from 'app/components/FormControl/MultiSelectField';
 
 export default function LendForm() {
   const schema = yup.object({
@@ -109,6 +110,13 @@ export default function LendForm() {
               <span className={selectedValue === 'b' ? 'activeColor' : ''}>NFT</span>
             </div>
           </div>
+          {selectedValue === 'a' ? (
+            <div className="multiSelect">
+              <MultipleSelect />
+            </div>
+          ) : (
+            ''
+          )}
 
           <div className="btnSearch">
             <ButtonField
@@ -135,16 +143,40 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
 
+    @media screen and (min-width: 320px) and (max-width: 600px) {
+      margin-top: 6px;
+    }
+
     .leftInput {
       position: relative;
       width: 417px;
       margin-right: 12px;
 
+      .MuiFormControl-root {
+        @media screen and (min-width: 320px) and (max-width: 600px) {
+          margin-bottom: 0;
+        }
+      }
+
       .maxBtn {
         width: 66px;
         position: absolute;
-        top: 23px;
+        top: 22px;
         right: 6px;
+
+        @media screen and (min-width: 320px) and (max-width: 600px) {
+          top: 5px;
+          right: 5px;
+          width: 56px;
+        }
+
+        button {
+          @media screen and (min-width: 320px) and (max-width: 600px) {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 12px;
+          }
+        }
       }
     }
 
@@ -164,6 +196,12 @@ const Wrapper = styled.div`
     font-weight: 500;
     line-height: 17px;
     letter-spacing: 0em;
+
+    @media screen and (min-width: 320px) and (max-width: 600px) {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 15px;
+    }
   }
 
   .flag {
@@ -179,6 +217,14 @@ const Wrapper = styled.div`
       font-weight: 500;
       line-height: 24px;
       letter-spacing: 0em;
+
+      @media screen and (min-width: 320px) and (max-width: 600px) {
+        padding: 12px 20px;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 24px;
+        margin-top: 40px;
+      }
     }
   }
 
@@ -200,5 +246,21 @@ const Wrapper = styled.div`
       line-height: 20px;
       letter-spacing: 0em;
     }
+  }
+
+  .multiSelect {
+    margin-top: 10px;
+
+    .MuiChip-root {
+      background-color: #2e3139;
+    }
+
+    .MuiSelect-select {
+      padding: 6px 12px;
+    }
+  }
+
+  .MuiList-root.MuiList-padding.MuiMenu-list.css-6hp17o-MuiList-root-MuiMenu-list {
+    background-color: red;
   }
 `;

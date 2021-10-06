@@ -49,6 +49,10 @@ const Wrapper = styled.button<{
 
   &.small {
     padding: 10px 20px;
+
+    @media screen and (min-width: 320px) and (max-width: 600px) {
+      padding: 10px 12px;
+    }
   }
 
   &.medium {

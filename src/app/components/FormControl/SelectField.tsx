@@ -33,11 +33,19 @@ const Wrapper = styled.div`
   overflow: hidden;
   border: 2px solid #74767b;
   border-radius: 30px;
+
+  @media screen and (min-width: 320px) and (max-width: 600px) {
+    margin-top: -5px;
+  }
   .MuiSelect-select {
     width: 100%;
-    padding: 12px;
+    padding: 10px 12px;
     color: #fff;
     border-radius: 30px;
+
+    @media screen and (min-width: 320px) and (max-width: 600px) {
+      padding: 6px 12px;
+    }
   }
 
   svg {

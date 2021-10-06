@@ -10,6 +10,7 @@
     "@mui/lab": "5.0.0-alpha.49",
     "@mui/material": "5.0.2",
     "@mui/styles": "5.0.1",
+    "@mui/system": "5.0.2",
     "@reduxjs/toolkit": "1.6.0",
     "@splidejs/splide": "2.4.21",
     "@testing-library/jest-dom": "5.14.1",

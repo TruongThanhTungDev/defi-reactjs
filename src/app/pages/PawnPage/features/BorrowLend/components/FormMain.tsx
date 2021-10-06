@@ -43,8 +43,15 @@ const Wrapper = styled.div`
   line-height: 20px;
   margin-left: 80px;
 
-  @media screen and (min-width: 374px) and (max-width: 600px) {
+  @media screen and (min-width: 320px) and (max-width: 600px) {
     margin-left: 0;
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 32px;
+  }
+
+  .MuiTabPanel-root {
+    padding: 0 24px;
   }
 
   .MuiTab-textColorPrimary {

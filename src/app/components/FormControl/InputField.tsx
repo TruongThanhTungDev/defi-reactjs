@@ -43,10 +43,21 @@ const Wrapper = styled.div<{ hasErr?: any }>`
     border-radius: 30px;
     border: 2px solid ${props => (props.hasErr ? '#ff5252' : '#74767B')};
   }
+
+  .MuiFormControl-root {
+    @media screen and (min-width: 320px) and (max-width: 600px) {
+      margin-top: 0;
+    }
+  }
+
   input {
     color: #fff;
     outline: none;
-    padding: 12px 20px;
+    padding: 10px 18px;
+
+    @media screen and (min-width: 320px) and (max-width: 600px) {
+      padding: 8px 16px;
+    }
   }
 
   fieldset {

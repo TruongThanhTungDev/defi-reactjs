@@ -34,7 +34,7 @@ const Wrapper = styled.div`
     letter-spacing: 0em;
     width: 628px;
 
-    @media screen and (min-width: 374px) and (max-width: 600px) {
+    @media screen and (min-width: 320px) and (max-width: 600px) {
       font-size: 36px;
       line-height: 44px;
       width: 100%;
@@ -57,7 +57,7 @@ const Wrapper = styled.div`
     line-height: 24px;
     letter-spacing: 0em;
 
-    @media screen and (min-width: 374px) and (max-width: 600px) {
+    @media screen and (min-width: 320px) and (max-width: 600px) {
       font-size: 14px;
       line-height: 17px;
       width: 85%;
@@ -70,8 +70,9 @@ const Wrapper = styled.div`
     width: 668px;
     height: 416px;
 
-    @media screen and (min-width: 374px) and (max-width: 600px) {
+    @media screen and (min-width: 320px) and (max-width: 600px) {
       width: 344px;
+      max-width: 100%;
       height: 214px;
       margin-top: 14px;
     }

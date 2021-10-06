@@ -81,6 +81,9 @@ export default function CryptoForm(props: Iprops) {
       <div className="searchBtn">
         <ButtonField content="Search" style="goldBtn" sizeBtn="big" type="submit" searchIcon />
       </div>
+      <div className="searchBtnMobile">
+        <ButtonField content="Search" style="goldBtn" sizeBtn="medium" type="submit" searchIcon />
+      </div>
       <div className="flagFooter"></div>
     </Wrapper>
   );
@@ -90,25 +93,65 @@ const Wrapper = styled.form`
   .wrapper {
     margin-top: 20px;
 
+    @media screen and (min-width: 320px) and (max-width: 600px) {
+      margin-top: 12px;
+    }
+
     .inputWrapper {
       display: flex;
       align-items: center;
+
+      @media screen and (min-width: 320px) and (max-width: 600px) {
+        margin-top: 6px;
+      }
+
+      input {
+        @media screen and (min-width: 320px) and (max-width: 600px) {
+          font-size: 14px;
+        }
+      }
     }
 
     .exitInput {
       width: 250px;
       margin-top: 20px;
+
+      @media screen and (min-width: 320px) and (max-width: 600px) {
+        margin-top: 6px;
+        width: 220px;
+
+        button {
+          font-size: 12px;
+        }
+      }
     }
 
     .leftInput {
       position: relative;
       width: 417px;
 
+      @media screen and (min-width: 320px) and (max-width: 600px) {
+        max-width: 220px !important;
+      }
+
       .maxBtn {
         width: 66px;
         position: absolute;
-        top: 23px;
+        top: 22px;
         right: 6px;
+
+        @media screen and (min-width: 320px) and (max-width: 600px) {
+          top: 4px;
+          right: 4px;
+          width: 56px;
+        }
+      }
+      button {
+        @media screen and (min-width: 320px) and (max-width: 600px) {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 12px;
+        }
       }
     }
 
@@ -116,6 +159,11 @@ const Wrapper = styled.form`
       margin-left: 12px;
       padding-top: 6px;
       flex: 1;
+
+      @media screen and (min-width: 320px) and (max-width: 600px) {
+        padding-top: 0;
+      }
+
       fieldset {
         border: none;
       }
@@ -126,6 +174,12 @@ const Wrapper = styled.form`
       font-size: 14px;
       font-weight: 500;
       line-height: 17px;
+
+      @media screen and (min-width: 320px) and (max-width: 600px) {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 15px;
+      }
     }
   }
 
@@ -135,9 +189,16 @@ const Wrapper = styled.form`
     cursor: text;
     margin-top: 10px;
 
+    @media screen and (min-width: 320px) and (max-width: 600px) {
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 15px;
+    }
+
     .notification {
       position: absolute;
-      width: 750px;
+      width: 760px;
       background-color: #808080;
       color: #fff;
       padding: 2px 20px;
@@ -145,6 +206,7 @@ const Wrapper = styled.form`
       left: -100px;
       top: 20px;
       display: none;
+      font-size: 14px;
 
       animation: notification 0.3s ease;
     }
@@ -156,12 +218,22 @@ const Wrapper = styled.form`
     svg {
       width: 20px;
       height: 20px;
+
+      @media screen and (min-width: 320px) and (max-width: 600px) {
+        width: 14px;
+        height: 14px;
+      }
     }
   }
 
   .searchBtn {
     margin-top: 60px;
     margin-bottom: 106px;
+
+    @media screen and (min-width: 320px) and (max-width: 600px) {
+      display: none;
+    }
+
     button {
       font-size: 20px;
       font-weight: 500;
@@ -169,6 +241,20 @@ const Wrapper = styled.form`
       letter-spacing: 0em;
     }
   }
+
+  .searchBtnMobile {
+    display: none;
+
+    @media screen and (min-width: 320px) and (max-width: 600px) {
+      display: block;
+      margin: 40px 0;
+
+      button {
+        line-height: 22px;
+      }
+    }
+  }
+
   .flagFooter {
     width: 100%;
     height: 1px;
