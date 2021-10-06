@@ -1,6 +1,5 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import { makeStyles } from '@material-ui/core';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -12,21 +11,7 @@ import LanguageIcon from '@mui/icons-material/Language';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 
-const useStyles = makeStyles(theme => ({
-  hidden: {
-    [theme.breakpoints.down('xs')]: {
-      display: 'none',
-    },
-  },
-  xsYellow: {
-    [theme.breakpoints.down('xs')]: {
-      color: '#ffbf00'!,
-    },
-  },
-}));
-
 const Contact = () => {
-  const classes = useStyles();
   const themes = useTheme();
   const matches = useMediaQuery(themes.breakpoints.down('md'));
   return (
@@ -85,7 +70,7 @@ const Contact = () => {
         </Box>
       </Box>
       <Box display="flex" marginTop="17px" fontSize="16px" fontWeight="500">
-        <Box color="#374151" className={classes.hidden}>
+        <Box color="#374151" display={matches ? 'none' : ''}>
           <MailOutlineIcon sx={{ fontSize: 24 }} />
         </Box>
         <Box
@@ -93,7 +78,7 @@ const Contact = () => {
           color="#9FA6B2"
           lineHeight="25px"
           fontFamily="Inter"
-          className={classes.hidden}
+          display={matches ? 'none' : ''}
         >
           support@defiforyou.uk
         </Box>

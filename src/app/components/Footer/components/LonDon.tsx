@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Box from '@mui/material/Box';
-import { makeStyles } from '@material-ui/core';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
