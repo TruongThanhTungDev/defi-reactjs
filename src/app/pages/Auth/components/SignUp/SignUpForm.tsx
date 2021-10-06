@@ -8,23 +8,9 @@ const SignUpForm = () => {
       <Box component="form" noValidate>
         <Grid className="container-form">
           <span className="title">Name</span>
-          <TextField
-            margin="normal"
-            required
-            fullWidth
-            name="email"
-            autoComplete="email"
-            autoFocus
-          />
+          <TextField margin="normal" required fullWidth name="email" autoComplete="email" />
           <span className="title">Email</span>
-          <TextField
-            margin="normal"
-            required
-            fullWidth
-            name="email"
-            autoComplete="email"
-            autoFocus
-          />
+          <TextField margin="normal" required fullWidth name="email" autoComplete="email" />
           <span className="title">Password</span>
           <TextField
             margin="normal"

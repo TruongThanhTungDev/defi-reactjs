@@ -9,7 +9,6 @@ const LoginForm = () => {
         <Grid className="container-form">
           <span className="title">Email</span>
           <TextField
-            color="primary"
             margin="normal"
             required
             fullWidth
