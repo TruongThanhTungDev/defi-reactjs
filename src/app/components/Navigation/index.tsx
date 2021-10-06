@@ -56,6 +56,10 @@ export default function Navigation() {
 }
 
 const Wrapper = styled.div`
+  a:active {
+    text-decoration: none;
+  }
+
   height: 100px;
   width: 100%;
 
