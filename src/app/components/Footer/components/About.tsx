@@ -7,7 +7,7 @@ export default function About() {
   const themes = useTheme();
   const matches = useMediaQuery(themes.breakpoints.down('md'));
   return (
-    <Box marginTop={matches ? '30px' : '56px'}>
+    <Box marginTop={matches ? '30px' : '56px'} marginBottom="40px">
       <Title>About DeFi For You.</Title>
       <TextContentYellow>DeFi For You </TextContentYellow>
       <TextContent>

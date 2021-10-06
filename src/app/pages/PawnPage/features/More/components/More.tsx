@@ -39,7 +39,7 @@ const BgImg = styled.div`
   padding-top: 48px;
   padding-bottom: 56px;
 
-  @media only screen and (min-width: 375px) and (max-width: 600px) {
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
     background-image: url(${bgimg375});
     background-size: 100%;
     background-repeat: no-repeat;
@@ -50,6 +50,16 @@ const BgImg = styled.div`
   }
   @media only screen and (max-width: 1800) {
     background-size: cover;
+  }
+  @media only screen and (min-width: 600px) and (max-width: 1280px) {
+    background-image: url(${bgimg375});
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    padding-top: 28px;
+    padding-bottom: 16px;
   }
 `;
 
@@ -71,7 +81,7 @@ const Button = styled.button`
     #bd8727 101.47%
   );
 
-  @media only screen and (min-width: 375px) and (max-width: 600px) {
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
     margin-top: 12px;
     width: 121px;
     height: 36px;
@@ -85,8 +95,11 @@ const H2 = styled.h2`
   font-weight: 600;
   font-size: 36px;
   margin: 0px;
-  @media only screen and (min-width: 375px) and (max-width: 600px) {
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
     font-size: 16px;
+  }
+  @media only screen and (min-width: 600px) and (max-width: 1280px) {
+    font-size: 20px;
   }
 `;
 
@@ -94,14 +107,16 @@ const PL = styled.p`
   color: #ffffff;
   width: 40%;
   height: 72px;
-  font-size: 20px;
+  font-size: 0.9rem;
   font-weight: 500;
   margin: 0px;
 
-  @media only screen and (min-width: 375px) and (max-width: 600px) {
-    /* width: 50%;
-    font-size: 12px; */
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
     display: none;
+  }
+  @media only screen and (min-width: 600px) and (max-width: 1280px) {
+    font-size: 0.8rem;
+    width: 60%;
   }
 `;
 
@@ -112,7 +127,7 @@ const PS = styled.p`
   font-weight: 500;
   font-size: 12px;
   margin: 0px;
-  @media only screen and (min-width: 375px) and (max-width: 600px) {
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
     display: block;
   }
 `;
