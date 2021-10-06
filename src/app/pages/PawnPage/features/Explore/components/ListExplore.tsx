@@ -46,6 +46,7 @@ export default function ListExplore() {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
   return (
     <Wrapper>
       <div className="seeAll">See all &rarr;</div>
