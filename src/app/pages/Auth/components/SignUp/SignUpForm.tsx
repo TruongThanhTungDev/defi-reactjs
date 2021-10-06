@@ -2,33 +2,37 @@ import { Button, Checkbox, FormControlLabel, Grid, Link, TextField } from '@mui/
 import { Box } from '@mui/system';
 import React from 'react';
 import { FormSignUp } from './styled';
+import InputField from 'app/components/FormControl/InputField';
+import * as yup from 'yup';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import ButtonField from 'app/components/FormControl/ButtonField';
+
 const SignUpForm = () => {
+  const schema = yup.object({
+    password: yup.string().required(),
+    email: yup.string().required(),
+  });
+
+  const form = useForm({
+    resolver: yupResolver(schema),
+  });
+
+  const handleSubmit = value => {
+    console.log(value);
+  };
   return (
     <FormSignUp>
-      <Box component="form" noValidate>
+      <Box component="form" noValidate onSubmit={form.handleSubmit(handleSubmit)}>
         <Grid className="container-form">
           <span className="title">Name</span>
-          <TextField margin="normal" required fullWidth name="email" autoComplete="email" />
+          <InputField name="email" form={form} title="Name" type="text" />
           <span className="title">Email</span>
-          <TextField margin="normal" required fullWidth name="email" autoComplete="email" />
+          <InputField name="email" form={form} title="Email" type="email" />
           <span className="title">Password</span>
-          <TextField
-            margin="normal"
-            required
-            fullWidth
-            name="password"
-            type="password"
-            autoComplete="current-password"
-          />
-          <span className="ti tle">Confirm password</span>
-          <TextField
-            margin="normal"
-            required
-            fullWidth
-            name="password"
-            type="password"
-            autoComplete="current-password"
-          />
+          <InputField name="email" form={form} title="Password" type="password" />
+          <span className="title">Confirm password</span>
+          <InputField name="email" form={form} title="Password" type="password" />
         </Grid>
         <Grid item>
           <p className="detail">
@@ -38,10 +42,9 @@ const SignUpForm = () => {
             You's Terms and Conditions of Use.
           </p>
         </Grid>
-        <Grid className="btn">
-          <Button type="submit" variant="contained" sx={{ mt: 3, mb: 2 }} className="btn-sign">
-            Create Account
-          </Button>
+
+        <Grid className="btn-create">
+          <ButtonField content="Create Account" style="goldBtn" sizeBtn="medium" type="submit" />
         </Grid>
       </Box>
     </FormSignUp>
