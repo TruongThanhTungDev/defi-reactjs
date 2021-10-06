@@ -1,5 +1,6 @@
 import React from 'react';
+import FooterUI from './components/Footer';
 
 export default function Footer() {
-  return <div>footer</div>;
+  return <FooterUI />;
 }
