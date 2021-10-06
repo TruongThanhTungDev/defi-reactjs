@@ -13,4 +13,8 @@ export default function BorrowLend() {
 const Wrapper = styled.div`
   width: 100%;
   background-color: var(--primary-bg);
+
+  .MuiButtonBase-root {
+    font-family: 'Montserrat', sans-serif;
+  }
 `;

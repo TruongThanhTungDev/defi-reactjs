@@ -92,6 +92,7 @@ export default function CryptoForm(props: Iprops) {
 const Wrapper = styled.form`
   .wrapper {
     margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
 
     @media screen and (min-width: 320px) and (max-width: 600px) {
       margin-top: 12px;

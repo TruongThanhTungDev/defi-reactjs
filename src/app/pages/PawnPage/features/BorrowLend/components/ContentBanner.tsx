@@ -9,13 +9,13 @@ export default function ContentBanner() {
       <h2>
         <Typewriter
           options={{
-            strings: ['Hello', 'World'],
+            strings: ['Borrow', 'Lend'],
             autoStart: true,
             loop: true,
             cursor: ' ',
           }}
         />{' '}
-        with <span>DeFi For You.</span>
+        With <span>DeFi For You.</span>
       </h2>
       <p>Get Crypto Loans Instantly, Regardless of Your Credit Rating</p>
 
@@ -32,7 +32,7 @@ const Wrapper = styled.div`
     font-weight: 700;
     line-height: 73px;
     letter-spacing: 0em;
-    width: 628px;
+    width: 580px;
 
     @media screen and (min-width: 320px) and (max-width: 600px) {
       font-size: 36px;
