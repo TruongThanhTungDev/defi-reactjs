@@ -14,9 +14,7 @@ const initColor = { neutral, semantic, accent, primary, gold };
 export const ColorContext = createContext(initColor);
 
 const ColorProvider = ({ children }: ColorContextProps) => {
-  return (
-    <ColorContext.Provider value={initColor}>{children}</ColorContext.Provider>
-  );
+  return <ColorContext.Provider value={initColor}>{children}</ColorContext.Provider>;
 };
 
 export default ColorProvider;

@@ -39,12 +39,12 @@ export function App() {
             <Redirect to="/pawn" />
           </Route>
 
-          <Route exact path="/auth">
-            <AuthPage />
-          </Route>
-
           <Route path="/pawn">
             <PawnPage />
+          </Route>
+
+          <Route path="/auth">
+            <AuthPage />
           </Route>
 
           <Route component={NotFoundPage} />
