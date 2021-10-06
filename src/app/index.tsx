@@ -18,6 +18,8 @@ import Navigation from './components/Navigation';
 import { NotFoundPage } from './components/NotFoundPage/Loadable';
 import AuthPage from './pages/Auth';
 import { PawnPage } from './pages/PawnPage/Loadable';
+import ResultBorrow from './pages/ResultBorrow';
+import ResultLend from './pages/ResultLend';
 
 export function App() {
   const { i18n } = useTranslation();
@@ -39,7 +41,7 @@ export function App() {
             <Redirect to="/pawn" />
           </Route>
 
-          <Route path="/pawn">
+          <Route exact path="/pawn">
             <PawnPage />
           </Route>
 
@@ -47,7 +49,15 @@ export function App() {
             <AuthPage />
           </Route>
 
-          <Route component={NotFoundPage} />
+          <Route path="/pawn/offer">
+            <ResultBorrow />
+          </Route>
+
+          <Route path="/pawn/lender">
+            <ResultLend />
+          </Route>
+
+          <Route path="*" component={NotFoundPage} />
         </Switch>
 
         <Footer />
