@@ -88,7 +88,7 @@ export const FormTabAuth = styled.div`
       flex-direction: column-reverse;
     }
   }
-  @media (min-width: 374px) and (max-width: 768px) {
+  @media (min-width: 320px) and (max-width: 768px) {
     padding: 21px 16px 32px 16px;
     h3 {
       font-style: normal;

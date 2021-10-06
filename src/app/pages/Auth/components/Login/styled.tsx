@@ -4,37 +4,29 @@ export const FormLogin = styled.div`
   .container-form {
     padding-right: 93px;
   }
-  .btn {
-    text-align: center;
+
+  .MuiFormHelperText-root.Mui-error {
+    bottom: -73px !important;
+  }
+  input {
+    color: #fff;
+    outline: none;
+    padding: 12px 20px;
   }
   .btn-sign {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    color: #282c37;
-    padding: 14px 33px;
-    background: linear-gradient(
-      221.15deg,
-      #bd8727 0%,
-      #ffd574 49.02%,
-      #feca50 62.02%,
-      #bd8727 101.47%
-    );
-    border-radius: 1000px;
+    margin: 0 auto;
+    width: 117px;
+    button {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 25.5px;
+    }
   }
-  .MuiInputBase-formControl {
-    border: 1px solid #74767b;
-    box-sizing: border-box;
-    border-radius: 22px;
-    height: 44px;
-  }
+
   .MuiTextField-root {
     margin-top: 5px;
     margin-bottom: 24px;
-  }
-  .input {
-    color: white;
   }
   .forgotPass {
     text-align: end;
@@ -53,7 +45,7 @@ export const FormLogin = styled.div`
     display: flex;
     color: #ffffff;
   }
-  @media (min-width: 374px) and (max-width: 768px) {
+  @media (min-width: 320px) and (max-width: 768px) {
     .container-form {
       padding: 0px;
     }

@@ -7,10 +7,11 @@ interface IProps {
   name: string;
   title: string;
   form: any;
+  type?: string;
 }
 
 function InputField(props: IProps) {
-  const { name, title, form } = props;
+  const { name, title, form, type } = props;
   const { control } = form;
   const {
     formState: { errors },
@@ -30,6 +31,7 @@ function InputField(props: IProps) {
             error={Boolean(hasError)}
             helperText={hasError?.message}
             margin="normal"
+            type={type}
           />
         )}
       />

@@ -71,6 +71,9 @@ const Wrapper = styled.div`
     margin-bottom: 20px;
     margin-top: 34px;
   }
+  @media (min-width: 1440) and (max-width: 1919) {
+  }
+
   @media (min-width: 374px) and (max-width: 480px) {
     .titleMobile {
       padding: 0 20px 0 30px;

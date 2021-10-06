@@ -43,4 +43,7 @@ const Wrapper = styled.div`
       margin-bottom: 40px;
     }
   }
+  @media (min-width: 1440px) and (max-width: 1919px) {
+    padding: 40px 26px 50px 26px;
+  }
 `;
